@@ -16,7 +16,6 @@ export const SalesDynamicsPage = () => {
     (st) => st.ui
   );
   const { d, dd } = jhonWeekSelector;
-  console.log(d, dd);
   const isTokensOfMp = useAppSelector(isTokensConsistMp);
   const isConsistense = useCallback(
     (mp: supportedMarketTypes, tokens: string[]) => isTokensOfMp(mp, tokens),
@@ -63,9 +62,6 @@ export const SalesDynamicsPage = () => {
     },
     { skip: skipSalesDynamics }
   );
-  console.log("tyt");
-
-  console.log(isFetching);
 
   const isLoading = useMemo(
     () => isProductsLoading || isFetching,
@@ -75,10 +71,6 @@ export const SalesDynamicsPage = () => {
     () => (data != null ? data : { brands: [], graph: [] }),
     [data]
   );
-
-  console.log("tyt1");
-
-  console.log(salesDynamicsData);
 
   return (
     <>
